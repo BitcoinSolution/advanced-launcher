@@ -33,12 +33,12 @@ except:
     import md5
 
 # Addon paths definition
-PLUGIN_DATA_PATH = xbmc.translatePath(os.path.join("special://profile/addon_data","plugin.program.advanced.launcher"))
+PLUGIN_DATA_PATH = xbmc.translatePath(os.path.join("special://profile/addon_data","plugin.program.xclouddev"))
 BASE_PATH = xbmc.translatePath(os.path.join("special://","profile"))
 HOME_PATH = xbmc.translatePath(os.path.join("special://","home"))
 FAVOURITES_PATH = xbmc.translatePath( 'special://profile/favourites.xml' )
 ADDONS_PATH = xbmc.translatePath(os.path.join(HOME_PATH,"addons"))
-CURRENT_ADDON_PATH = xbmc.translatePath(os.path.join(ADDONS_PATH,"plugin.program.advanced.launcher"))
+CURRENT_ADDON_PATH = xbmc.translatePath(os.path.join(ADDONS_PATH,"plugin.program.xclouddev"))
 BASE_CURRENT_SOURCE_PATH = os.path.join(PLUGIN_DATA_PATH,"launchers.xml")
 TEMP_CURRENT_SOURCE_PATH = os.path.join(PLUGIN_DATA_PATH,"launchers.tmp")
 MERGED_SOURCE_PATH = os.path.join(PLUGIN_DATA_PATH,"merged-launchers.xml")
@@ -76,7 +76,7 @@ SEARCH_GENRE_COMMAND = "%%SEARCH_GENRE%%"
 SCAN_NEW_ITEM_COMMAND = "%%SCAN_NEW_ITEM%%"
 
 # Locales parameters
-__settings__ = Addon( id="plugin.program.advanced.launcher" )
+__settings__ = Addon( id="plugin.program.xclouddev" )
 __lang__ = __settings__.getLocalizedString
 
 def __language__(string):
@@ -3011,7 +3011,7 @@ def _find_category_roms( self, search, category ):
         s_cmd = SEARCH_STUDIO_COMMAND
     if category == 'genre' :
         s_cmd = SEARCH_GENRE_COMMAND
-    s_url = 'plugin://plugin.program.advanced.launcher/?'+search+'/'+s_cmd
+    s_url = 'plugin://plugin.program.xclouddev/?'+search+'/'+s_cmd
     if (len(self.launchers) > 0):
         rl = {}
         for launcherID in sorted(self.launchers.iterkeys()):
